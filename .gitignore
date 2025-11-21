@@ -1,0 +1,21 @@
+# OS / Editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# Node / Python / build
+node_modules/
+dist/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Mac
+.Spotlight-V100
+.Trashes
+
+# OneDrive temp files
+~$*

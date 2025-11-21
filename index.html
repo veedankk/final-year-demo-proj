@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard — Bands & Guards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="sidebar-logo">Guardian</div>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        </div>
+        <nav class="sidebar-nav main-nav" id="mainNav" aria-label="Main navigation">
+          <a href="#home" class="nav-link" data-target="home">Home</a>
+          <a href="#register" class="nav-link" data-target="register">Register</a>
+          <a href="#login" class="nav-link" data-target="login">Login</a>
+          <a href="#dashboard" class="nav-link auth-only" data-target="dashboard">Dashboard</a>
+        </nav>
+      </aside>
+
+      <div class="app-main">
+        <header class="topbar">
+          <div class="container header-inner">
+            <div class="topbar-left">
+              <h2 class="top-title">Crowd Management System</h2>
+            </div>
+            <div class="topbar-right">
+              <input class="search" placeholder="Search..." aria-label="Search">
+              <div class="avatar">GA</div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+      <section id="home" class="container page active">
+        <h2>Welcome</h2>
+        <p>Simple dashboard demo: register or login, then open the Dashboard to view locations, bands, and guards.</p>
+      </section>
+
+      <section id="register" class="container page">
+        <h2>Register</h2>
+        <form id="registerForm" class="form">
+          <label>Username<input type="text" name="username" required></label>
+          <label>Password<input type="password" name="password" required></label>
+          <button type="submit" class="btn">Register</button>
+        </form>
+        <p class="muted">(Registration is local to this demo)</p>
+      </section>
+
+      <section id="login" class="container page">
+        <h2>Login</h2>
+        <form id="loginForm" class="form">
+          <label>Username<input type="text" name="username" required></label>
+          <label>Password<input type="password" name="password" required></label>
+          <button type="submit" class="btn">Login</button>
+        </form>
+        <p class="muted">(Login is simulated)</p>
+      </section>
+
+      <section id="dashboard" class="container page">
+        <h2>Dashboard</h2>
+        <div class="dashboard-grid">
+          <aside class="controls">
+            <label>Location
+              <select id="locationSelect">
+                <option value="North">North</option>
+                <option value="South">South</option>
+                <option value="East">East</option>
+                <option value="West">West</option>
+              </select>
+            </label>
+
+            <div class="summary">
+              <div class="summary-item">
+                <h4>Total Bands</h4>
+                <p id="totalBands">0</p>
+              </div>
+              <div class="summary-item">
+                <h4>Active Bands</h4>
+                <p id="activeBands">0</p>
+              </div>
+            </div>
+
+            <div class="guards">
+              <h4>Guards active near area</h4>
+              <ul id="guardsList"></ul>
+            </div>
+          </aside>
+
+          <section class="live">
+            <h3>Bands (press to notify)</h3>
+            <div id="bandsList" class="list"></div>
+
+            <h3>Pressed (recent)</h3>
+            <div id="pressedList" class="list small"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p>Demo Dashboard — no backend</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Demo</p>
+      </div>
+    </footer>
+
+        </main>
+
+        <footer class="site-footer">
+          <div class="container footer-grid">
+            <div>
+              <p>Demo Dashboard — no backend</p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Demo</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
